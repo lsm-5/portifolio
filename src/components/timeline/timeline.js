@@ -6,7 +6,7 @@ import siteConfig from '../../../data/siteConfig'
 const Timeline = ({ className }) => {
   return (
     <div className={className}>
-      <h1>Experience</h1>
+      <h1>Experiência</h1>
       {siteConfig.jobs && siteConfig.jobs.map(job => (
         <article key={job.begin.month + job.begin.year} className='timeline__item'>
           <div className="inner">
@@ -14,7 +14,7 @@ const Timeline = ({ className }) => {
               <span className="timeline__month">{job.begin.month}</span>
               <span className="timeline__year">{job.begin.year}</span>
             </span>
-            <h2 className='timeline__title'>{job.occupation} at {job.company} <br /><small className='timeline__title--small'>({job.duration || 'present'})</small></h2>
+            <h2 className='timeline__title'>{job.occupation} EM {job.company} <br /><small className='timeline__title--small'>({job.duration || 'present'})</small></h2>
             <p>{job.description}</p>
           </div>
         </article>

@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope, FaFilePdf } from "react-icons/fa"
 import siteConfig from '../../data/siteConfig'
 import { withPrefix } from "gatsby"
+import downloadFile from '../download/curriculo.pdf' 
+
 
 import Layout from '../components/layout'
 import Hero from '../components/hero'
@@ -29,16 +31,20 @@ class Home extends React.Component {
     const title = siteConfig.siteTitle
     const {keywords} = siteConfig
     return (
+        <>
       <Layout location={this.props.location}>
         <SEO
           title={title}
           keywords={keywords}
         />
 
+
         <Hero
-          heroImg={siteConfig.siteCover}
-          title={title}
+        heroImg={withPrefix('/images/back.jpg')}
+        title={title}
         />
+        
+
 
         <Wrapper className={this.props.className} >
           <Container className="page-content" fluid>
@@ -49,6 +55,9 @@ class Home extends React.Component {
                   src={withPrefix(siteConfig.authorAvatar)}
                   alt='user avatar'
                 />
+                <div>
+                  {title && <h1>{title}</h1>}
+                </div>
                 <div className="social">
                   {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github}>
                     <FaGithub className="social-icon" size="32" />
@@ -56,8 +65,8 @@ class Home extends React.Component {
                   {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin}>
                     <FaLinkedin className="social-icon" size="32" />
                   </a>}
-                  {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter}>
-                    <FaTwitter className="social-icon" size="32" />
+                  {siteConfig.social.pdf && <a className="social-link pdf" href={downloadFile} download="Curriculo Lucas Mendonça" >
+                    <FaFilePdf className="social-icon" size="32" />
                   </a>}
                   {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
                     <FaEnvelope className="social-icon" size="32" />
@@ -67,10 +76,10 @@ class Home extends React.Component {
             </Row>
             <Row>
               <Col xs={4} sm={4}>
-                <About title='About' text={siteConfig.authorDescription}/>
+                <About title='Sobre' text={siteConfig.authorDescription}/>
               </Col>
               <Col xs={4} sm={4}>
-                <Skills title='Skills' skills={siteConfig.skills} />
+                <Skills title='Habilidades' skills={siteConfig.skills} />
               </Col>
             </Row>
             <Separator />
@@ -80,6 +89,7 @@ class Home extends React.Component {
           </Container>
         </Wrapper>
       </Layout>
+      </>
     )
   }
 }
@@ -111,6 +121,7 @@ export default styled(Home)`
   .social-link {
     padding: 8px;
     color: #555;
+    align-self: center;
   }
 
   a.social-link.twitter:hover {
@@ -125,7 +136,11 @@ export default styled(Home)`
     color: #0077B5;
   }
 
-  a.social-link.email:hover {
+  a.social-link.pdf:hover {
     color: #c23a2b;
+  }
+
+  a.social-link.email:hover {
+    color: #ffa500;
   }
 `

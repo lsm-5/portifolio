@@ -1,6 +1,8 @@
 import React from "react";
 import jsonFetch from "simple-json-fetch";
 import styled from 'styled-components'
+import {format} from 'date-fns'
+import pt from 'date-fns/locale/pt'
 import siteConfig from '../../../data/siteConfig'
 
 import Loader from '../loader'
@@ -27,7 +29,7 @@ class Repositories extends React.Component {
     const { status } = this.state
     return (
       <div className={this.props.className}>
-        <h2>Latest repositories on Github</h2>
+        <h2>Últimos repositórios no Github</h2>
         {status === "loading" && <div className='repositories__loader'><Loader /></div>}
         {status === "ready" &&
           this.state.repos && (
@@ -41,10 +43,15 @@ class Repositories extends React.Component {
                       </a>
                       <div>{repo.description}</div>
                       <div className="repositories__repo-date">
-                        Updated: {new Date(repo.updated_at).toUTCString()}
+                        Atualizado:   {format(new Date(repo.updated_at), `EEEE, kk:mm'h', dd/MM/yyyy, OOOO`, { locale: pt})}
                       </div>
                       <div className="repositories__repo-star">
                         ★ {repo.stargazers_count}
+                      </div>
+                      <div>
+                        <h6>
+                        Linguagem: {repo.language}
+                        </h6>
                       </div>
                     </div>
                     <hr />

@@ -1,107 +1,148 @@
 module.exports = {
-  siteTitle: 'Hi! I\'m Francisco!',
-  siteDescription: `Create your online curriculum in just a few minutes with this starter`,
+  siteTitle: 'Olá! Sou Lucas Mendonça!',
+  siteDescription: `Meu portifólio`,
   keyWords: ['gatsbyjs', 'react', 'curriculum'],
-  authorName: 'Francisco Santos',
-  twitterUsername: '_franciscodf',
-  githubUsername: 'santosfrancisco',
+  authorName: 'Lucas Mendonça',
+  githubUsername: 'lsm-5',
   authorAvatar: '/images/avatar.jpeg',
-  authorDescription: `Developer, passionate about what I do. Always interested in how the sites were made, I started to study HTML by hobby. <br />
-    In 2012 I started working as a support technician and I approached the developers.
-    In 2015, I started to study C # and started to contribute with the team giving maintenance in an application in C # and .NET. <br />
-    I currently work as a frontend developer and mainly work with <strong>Javascript, NodeJS e React.</strong>`,
+  authorDescription: `Desenvolvedor, apaixonado pelo o que faço.<br />
+  Em 2019 comecei a ser monitor da disciplina de Engenharia de Software e Sistema, que me despertou a vontade de criar e gerenciar projetos.
+  Ainda em 2019, investi na minha carreira e finalizei cursos que me dava mais autonomia em criar projetos do total zero seguindo diversos pattern. <br />
+  E hoje estagio na área que gosto, sendo fullstack nas tecnologias <strong> ReactJS, React Native e NodeJS.</strong>`,
   skills: [
     {
-      name: 'HTML',
-      level: 70
-    },
-    {
-      name: 'CSS',
-      level: 60
+      name: 'React Native',
+      level: 87
     },
     {
       name: 'Javascript',
+      level: 60
+    },
+    {
+      name: 'Html',
       level: 50
     },
     {
       name: 'NodeJs',
-      level: 40
+      level: 80
     },
     {
-      name: 'React',
-      level: 60
+      name: 'ReactJS',
+      level: 80
     },
     {
       name: 'Git',
       level: 70
     },
+    {
+      name: 'Typescript',
+      level: 70
+    }
     /* more skills here */
   ],
   jobs: [
     /* more portifolio items here */
     {
-      company: "Gympass",
       begin: {
-        month: 'sep',
+        month: 'out',
         year: '2019'
       },
+      company: "UFPE - Campus Recife",
       duration: null,
-      occupation: "Frontend developer",
-      description: "I am part of the Corporate team, responsible for the development and maintenance of the employee management platform, giving more and more autonomy to partner companies."
-  
-    },  {
-      company: "Lendico",
-      begin: {
-        month: 'apr',
-        year: '2018'
-      },
-      duration: null,
-      occupation: "Frontend developer",
-      description: "I integrate the Frontend team responsible for developing and maintaining the online lending platform."
-  
-    }, {
-      company: "Anapro",
-      begin: {
-        month: 'dec',
-        year: '2016'
-      },
-      duration: '1 yr e 5 mos',
-      occupation: "Fullstack developer",
-      description: "Development and maintenance, corrective and preventive, of web applications for the real estate market."
-    }, {
-      company: "Anapro",
+      occupation: "Participação no Hackapet",
+      description: "Participação na segunda edição do Hackathon promovido pela Pet-Informática."
+    },
+    {
       begin: {
         month: 'set',
-        year: '2012'
+        year: '2019'
       },
-      duration: '4 yrs e 3 mos',
-      occupation: "Support Technician",
-      description: "Responsible for the implementation and parameterization of the system, training and customer support. Acting also in person in real estate launches guaranteeing the success and good use of the tool."
-  
+      company: "Praecanto Tecnologia",
+      duration: "1 ano",
+      occupation: "Estágio",
+      description: "Auxiliar no desenvolvimento de front-end com javascript/React e React Native, e no Back-end com python/flask"
+    },
+    {
+      begin: {
+        month: 'set',
+        year: '2019'
+      },
+      company: "UFPE - Campus Recife",
+      duration: "6 meses",
+      occupation: "Monitoria em Engenharia de Software e Sistemas",
+      description: "Ajudou 30 alunos iniciantes aprenderem Angular, TypeScript e testes automatizado com Selenium e Cucumber, através do acompanhamento online e presencial."
+    },
+    {
+      begin: {
+        month: 'set',
+        year: '2019'
+      },
+      company: "UFPE - Campus Recife",
+      duration: "6 meses",
+      occupation: "Bolsista no SESST",
+      description: "Bolsista de apoio acadêmico na Seção de Saúde e Segurança do Trabalho."
+    },
+    {
+      begin: {
+        month: 'out',
+        year: '2018'
+      },
+      company: "UFPE - Campus Recife",
+      duration: null,
+      occupation: "Participação no Hackapet",
+      description: "Participação na primeira edição do Hackathon promovido pela Pet-Informática."
+    },
+    {
+      begin: {
+        month: 'set',
+        year: '2018'
+      },
+      company: "UFPE - Campus Recife",
+      duration: "1 ano",
+      occupation: "Bolsista no NASE",
+      description: "Bolsista de apoio acadêmico no Núcleo de Atenção à Saúde dos Estudantes."
+    },
+    {
+      begin: {
+        month: 'fev',
+        year: '2018'
+      },
+      company: "UFPE - Campus Recife",
+      duration: "1 ano e 6 meses",
+      occupation: "Monitoria de Introdução à Programação",
+      description: "Ajudou 80 alunos iniciantes aprenderem Java e Orientação à Objetos, através do acompanhamento online e presencial."
     },
   ],
   portifolio: [
     {
-      image: "/images/gatsby-starter-cv.png",
-      description: "Gatsby starter CV template",
-      url: "https://www.gatsbyjs.org/starters/santosfrancisco/gatsby-starter-cv/"
+      image: "/images/gobarber.png",
+      description: "Projeto GoBarber",
+      subDescription: "Desenvolvido para unir prestadores de serviços e clientes",
+      url: "https://github.com/lsm-5/GoBarber"
     },
     {
-      image: "/images/awesome-grid.png",
-      description: "Responsive grid for ReactJS",
-      url: "https://github.com/santosfrancisco/react-awesome-styled-grid"
+      image: "/images/ecoleta.png",
+      description: "Projeto Ecoleta",
+      subDescription: "Desenvolvido a fim de juntar empresas coletora de resíduos e lixos em descarteis",
+      url: "https://github.com/lsm-5/Ecoleta-01"
+    },
+    {
+      image: "/images/bussolafinanceira.png",
+      description: "Projeto Bússola Financeira",
+      subDescription: "Desenvolvido com o intuíto de controlar o dinheiro reservado para sua finalidade",
+      url: "https://github.com/lsm-5/bussola_financeira"
     },
     /* more portifolio items here */
   ],
   social: {
-    twitter: "https://twitter.com/_franciscodf",
-    linkedin: "https://www.linkedin.com/in/santos-francisco",
-    github: "https://github.com/santosfrancisco",
-    email: "yoshi.df@gmail.com"
+    linkedin: "https://www.linkedin.com/in/lucas-mendon%C3%A7a-12181a187/",
+    github: "https://github.com/lsm-5",
+    email: "lucasmendonca.dev@gmail.com",
+    pdf: "yes"
   },
-  siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
-  pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/cover.jpeg',
+  siteUrl: 'https://lsm-5.github.io/portifolio',
+  pathPrefix: '/portifolio', // Note: it must *not* have a trailing slash.
+  siteCover: '/images/back.jpg',
   googleAnalyticsId: 'UA-000000000-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
@@ -113,8 +154,8 @@ module.exports = {
       url: '/',
     },
     {
-      label: 'Portifolio',
-      url: '/portifolio',
+      label: 'Projetos',
+      url: '/project',
     }
   ]
 }
